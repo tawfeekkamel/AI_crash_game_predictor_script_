@@ -43,17 +43,10 @@ The primary goal of this project is to demonstrate a machine learning workflow f
 * scikit-learn
 
 ## Installation
-
-1.  Clone the repository:
-    ```bash
-    git clone <your-repository-url>
-    cd <your-repository-directory>
-    ```
-2.  Install the required libraries:
+  Install the required libraries:
     ```bash
     pip install pandas scikit-learn
     ```
-    *(Consider creating a `requirements.txt` file for easier dependency management)*
 
 ## Usage
 
