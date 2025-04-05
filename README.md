@@ -53,9 +53,8 @@ The primary goal of this project is to demonstrate a machine learning workflow f
 1.  Make sure the `data - Copy.csv` file is present in the same directory as the script.
 2.  Run the Python script from your terminal:
     ```bash
-    python your_script_name.py
+    python Crash(1).py
     ```
-    *(Replace `your_script_name.py` with the actual name of your Python file)*
 
 ## Workflow
 
