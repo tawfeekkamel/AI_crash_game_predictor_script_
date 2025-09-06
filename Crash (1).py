@@ -1,6 +1,5 @@
 from sklearn.model_selection import cross_val_score
-from sklearn.linear_model import Ridge
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestRegressor 
 from sklearn.neural_network import MLPRegressor
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
@@ -9,15 +8,14 @@ from sklearn.model_selection import train_test_split
 
 class Process:
     def __init__(self):
-        self.df = pd.read_csv('data - Copy.csv')
-        self.y = self.df['Multiplier(Crash)']
-        self.X = self.df.drop(columns=['Multiplier(Crash)', 'Time'])
+        self.df = pd.read_csv('games-copy.csv')
+        self.y = self.df['max_rate']
+        self.X = self.df.drop(columns=['max_rate'])
         self.scaler = StandardScaler()
         self.X = self.scaler.fit_transform(self.X)
         self.train_X, self.test_X, self.train_y, self.test_y = train_test_split(self.X, self.y, test_size=0.9, random_state=123)
         self.forest_reg = RandomForestRegressor()
-        self.nn_reg = MLPRegressor(hidden_layer_sizes=(100, 50), max_iter=3000, random_state=123)
-        self.ridge_reg = Ridge(alpha=1.0)  # Adding Ridge Regression
+        self.nn_reg = MLPRegressor(hidden_layer_sizes=(50, 50, 50, 50, 50), max_iter=3000, random_state=123)
 
 class Train:
     def __init__(self):
